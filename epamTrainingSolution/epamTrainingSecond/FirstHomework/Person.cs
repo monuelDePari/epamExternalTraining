@@ -1,7 +1,8 @@
-﻿
+﻿using System;
+
 namespace epamTrainingSecond
 {
-    struct Person
+    struct Person : IPrinter
     {
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -10,7 +11,13 @@ namespace epamTrainingSecond
         {
             if (n > 0)
                 return (Age > n) ? $"{Name} {Surname} older than {n}" : $"{Name} {Surname} younger than {n}";
-            else return "0";
+            else
+                return "0";
+        }
+
+        public void Print(string str)
+        {
+            Console.WriteLine(str);
         }
     }
 }

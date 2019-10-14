@@ -32,6 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,18 +43,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FirstTask.cs" />
-    <Compile Include="ISize.cs" />
-    <Compile Include="ICordinates.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="ConsolePrinter.cs" />
+    <Compile Include="FirstHomework\enumGetter.cs" />
+    <Compile Include="FirstHomework\FirstHomeworkRunner.cs" />
+    <Compile Include="FirstHomework\FirstTask.cs" />
+    <Compile Include="FirstHomework\ISize.cs" />
+    <Compile Include="FirstHomework\ICordinates.cs" />
+    <Compile Include="FirstHomework\Person.cs" />
+    <Compile Include="IPrinter.cs" />
+    <Compile Include="IRunner.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rectangle.cs" />
-    <Compile Include="SecondTask.cs" />
-    <Compile Include="ThirdTask.cs" />
+    <Compile Include="FirstHomework\Rectangle.cs" />
+    <Compile Include="FirstHomework\SecondTask.cs" />
+    <Compile Include="FirstHomework\ThirdTask.cs" />
+    <Compile Include="SecondHomework\ExceptionGenerator.cs" />
+    <Compile Include="SecondHomework\IExceptionGenerator.cs" />
+    <Compile Include="SecondHomework\SecondHomeworkRunner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ThirdHomework\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

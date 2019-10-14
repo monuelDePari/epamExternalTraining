@@ -5,6 +5,6 @@ namespace epamTrainingSecond
     {
         double Width { get; set; }
         double Height { get; set; }
-        void Perimetr();
+        void Perimeter();
     }
 }

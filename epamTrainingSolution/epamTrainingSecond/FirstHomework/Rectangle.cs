@@ -2,7 +2,7 @@
 
 namespace epamTrainingSecond
 {
-    public struct Rectangle : ISize, ICordinates
+    public struct Rectangle : ISize, ICordinates, IPrinter
     {
         public double Width { get; set; }
         public double Height { get; set; }
@@ -10,9 +10,14 @@ namespace epamTrainingSecond
         public double Y { get; set; }
 
 
-        public void Perimetr()
+        public void Perimeter()
         {
-            Console.WriteLine(2 * Width + 2 * Height);
+            Print((2 * Width + 2 * Height).ToString());
+        }
+
+        public void Print(string str)
+        {
+            Console.WriteLine(str);
         }
     }
 }
