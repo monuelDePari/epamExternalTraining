@@ -60,12 +60,15 @@
     <Compile Include="SecondHomework\ExceptionGenerator.cs" />
     <Compile Include="SecondHomework\IExceptionGenerator.cs" />
     <Compile Include="SecondHomework\SecondHomeworkRunner.cs" />
+    <Compile Include="ThirdHomework\DirectorySearcher.cs" />
+    <Compile Include="ThirdHomework\FileByPartialNameFinder.cs" />
+    <Compile Include="ThirdHomework\IDirectorySearcher.cs" />
+    <Compile Include="ThirdHomework\IFileByPartialNameFinder.cs" />
+    <Compile Include="ThirdHomework\ThirdHomeworkRunner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ThirdHomework\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
