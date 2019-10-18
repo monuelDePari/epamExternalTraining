@@ -10,8 +10,8 @@ namespace epamTrainingSecond.ThirdHomework
 {
     class DirectorySearcher : IDirectorySearcher, IPrinter
     {
+        private static readonly NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public string Path { get; set; }
-        private readonly Log log = new Log();
         public DirectorySearcher()
         {
             Print("Default path is set to C:\\epamExternalTraining");
@@ -34,38 +34,20 @@ namespace epamTrainingSecond.ThirdHomework
             catch(UnauthorizedAccessException e)
             {
                 Print(e.Message);
-                log.WriteEntry(e.Message);
+                logger.Error(e, e.Message);
                 throw new UnauthorizedAccessException();
             }
             catch (ArgumentNullException e)
             {
                 Print(e.Message);
-                log.WriteEntry(e.Message);
+                logger.Error(e, e.Message);
                 throw new ArgumentException();
-            }
-            catch (PathTooLongException e)
-            {
-                Print(e.Message);
-                log.WriteEntry(e.Message);
-                throw new PathTooLongException();
             }
             catch (DirectoryNotFoundException e)
             {
                 Print(e.Message);
-                log.WriteEntry(e.Message);
+                logger.Error(e, e.Message);
                 throw new DirectoryNotFoundException();
-            }
-            catch (IOException e)
-            {
-                Print(e.Message);
-                log.WriteEntry(e.Message);
-                throw new IOException();
-            }
-            catch (ArgumentException e)
-            {
-                Print(e.Message);
-                log.WriteEntry(e.Message);
-                throw new ArgumentException();
             }
         }
 
@@ -84,38 +66,20 @@ namespace epamTrainingSecond.ThirdHomework
             catch (UnauthorizedAccessException e)
             {
                 Print(e.Message);
-                log.WriteEntry(e.Message);
+                logger.Error(e, e.Message);
                 throw new UnauthorizedAccessException();
             }
             catch (ArgumentNullException e)
             {
                 Print(e.Message);
-                log.WriteEntry(e.Message);
+                logger.Error(e, e.Message);
                 throw new ArgumentException();
-            }
-            catch (PathTooLongException e)
-            {
-                Print(e.Message);
-                log.WriteEntry(e.Message);
-                throw new PathTooLongException();
             }
             catch (DirectoryNotFoundException e)
             {
                 Print(e.Message);
-                log.WriteEntry(e.Message);
+                logger.Error(e, e.Message);
                 throw new DirectoryNotFoundException();
-            }
-            catch (IOException e)
-            {
-                Print(e.Message);
-                log.WriteEntry(e.Message);
-                throw new IOException();
-            }
-            catch (ArgumentException e)
-            {
-                Print(e.Message);
-                log.WriteEntry(e.Message);
-                throw new ArgumentException();
             }
         }
 

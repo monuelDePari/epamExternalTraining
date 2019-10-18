@@ -19,7 +19,7 @@ namespace epamTrainingSecond
                 ThirdHomeworkRunner thirdHomeworkRunner = new ThirdHomeworkRunner();
                 thirdHomeworkRunner.Run();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
