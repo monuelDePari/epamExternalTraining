@@ -11,7 +11,8 @@ namespace epamTrainingSecond.ThirdHomework
     class FileByPartialNameFinder : IFileByPartialNameFinder, IPrinter
     {
         public string Path { get; set; }
-        private static readonly NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        //private static readonly NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        Logger logger = new Logger();
         List<FileInfo> findedFilesByPartialName = new List<FileInfo>();
         public FileByPartialNameFinder()
         {
@@ -42,19 +43,19 @@ namespace epamTrainingSecond.ThirdHomework
             catch (UnauthorizedAccessException e)
             {
                 Print(e.Message);
-                logger.Error(e, e.Message);
+                logger.writeMessageLog(e);
                 throw new UnauthorizedAccessException();
             }
             catch (ArgumentNullException e)
             {
                 Print(e.Message);
-                logger.Error(e, e.Message);
+                logger.writeMessageLog(e);
                 throw new ArgumentException();
             }
             catch (DirectoryNotFoundException e)
             {
                 Print(e.Message);
-                logger.Error(e, e.Message);
+                logger.writeMessageLog(e);
                 throw new DirectoryNotFoundException();
             }
         }
@@ -74,19 +75,19 @@ namespace epamTrainingSecond.ThirdHomework
             catch (UnauthorizedAccessException e)
             {
                 Print(e.Message);
-                logger.Error(e, e.Message);
+                logger.writeMessageLog(e);
                 throw new UnauthorizedAccessException();
             }
             catch (ArgumentNullException e)
             {
                 Print(e.Message);
-                logger.Error(e, e.Message);
+                logger.writeMessageLog(e);
                 throw new ArgumentException();
             }
             catch (DirectoryNotFoundException e)
             {
                 Print(e.Message);
-                logger.Error(e, e.Message);
+                logger.writeMessageLog(e);
                 throw new DirectoryNotFoundException();
             }
         }

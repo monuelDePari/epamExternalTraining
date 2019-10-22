@@ -14,7 +14,7 @@ namespace epamTrainingSecond
         {
             try
             {
-                using (StreamReader streamReader = new StreamReader(ConfigurationSettings.AppSettings["PathToLog"].ToString()))
+                using (StreamReader streamReader = new StreamReader(ConfigurationManager.AppSettings["PathToLog"].ToString()))
                 {
                     string line;
                     while ((line = streamReader.ReadLine()) != null)
@@ -32,9 +32,12 @@ namespace epamTrainingSecond
 
         public void writeMessageLog(Exception exception)
         {
+            if (!File.Exists(ConfigurationManager.AppSettings["PathToLog"].ToString()))
+                File.Create(ConfigurationManager.AppSettings["PathToLog"].ToString());
+
             try
             {
-                using (StreamWriter streamWriter = File.AppendText(ConfigurationSettings.AppSettings["PathToLog"].ToString()))
+                using (StreamWriter streamWriter = File.AppendText(ConfigurationManager.AppSettings["PathToLog"].ToString()))
                 {
                     streamWriter.WriteLine(exception.Message);
                 }
@@ -44,12 +47,6 @@ namespace epamTrainingSecond
                 Console.WriteLine("File could not be written");
                 Console.WriteLine(e.Message);
             }
-        }
-
-        public void createFileToLog()
-        {
-            if (!File.Exists(ConfigurationSettings.AppSettings["PathToLog"].ToString()))
-                File.Create(ConfigurationSettings.AppSettings["PathToLog"].ToString());
         }
     }
 }

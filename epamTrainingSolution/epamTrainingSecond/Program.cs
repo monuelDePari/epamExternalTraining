@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using epamTrainingSecond.FifthHomework;
 using epamTrainingSecond.FirstHomework;
 using epamTrainingSecond.SecondHomework;
 using epamTrainingSecond.ThirdHomework;
@@ -8,8 +10,10 @@ namespace epamTrainingSecond
 {
     class Program
     {
+        //private static readonly NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         static void Main(string[] args)
         {
+            Logger logger = new Logger();
             try
             {
                 FirstHomeworkRunner firstHomeworkRunner = new FirstHomeworkRunner();
@@ -22,11 +26,7 @@ namespace epamTrainingSecond
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                Console.WriteLine("Somethind went wrong, exit app");
-                Environment.Exit(0);
+                logger.writeMessageLog(e);
             }
             Console.ReadKey();
         }
