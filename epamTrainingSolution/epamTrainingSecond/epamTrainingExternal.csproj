@@ -78,6 +78,7 @@
     <Compile Include="SecondHomework\ExceptionGenerator.cs" />
     <Compile Include="SecondHomework\IExceptionGenerator.cs" />
     <Compile Include="SecondHomework\SecondHomeworkRunner.cs" />
+    <Compile Include="SixHomework\InnerInfoAboutClassesOutputer.cs" />
     <Compile Include="ThirdHomework\DirectorySearcher.cs" />
     <Compile Include="ThirdHomework\FileByPartialNameFinder.cs" />
     <Compile Include="ThirdHomework\IDirectorySearcher.cs" />
@@ -85,7 +86,9 @@
     <Compile Include="ThirdHomework\ThirdHomeworkRunner.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -94,6 +97,11 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\TestDll1\TestDll1.csproj">
+      <Project>{6f80f72c-01c5-420d-8aa7-ba4813df83d3}</Project>
+      <Name>TestDll1</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29409.12
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "epamTrainingExternal", "epamTrainingSecond\epamTrainingExternal.csproj", "{5402B00D-C5B3-4017-B506-058C7688EA3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDll1", "TestDll1\TestDll1.csproj", "{6F80F72C-01C5-420D-8AA7-BA4813DF83D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5402B00D-C5B3-4017-B506-058C7688EA3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5402B00D-C5B3-4017-B506-058C7688EA3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5402B00D-C5B3-4017-B506-058C7688EA3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F80F72C-01C5-420D-8AA7-BA4813DF83D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F80F72C-01C5-420D-8AA7-BA4813DF83D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F80F72C-01C5-420D-8AA7-BA4813DF83D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F80F72C-01C5-420D-8AA7-BA4813DF83D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
