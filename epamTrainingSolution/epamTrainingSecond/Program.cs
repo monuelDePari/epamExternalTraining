@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using epamTrainingSecond.FifthHomework;
-using epamTrainingSecond.FirstHomework;
-using epamTrainingSecond.SecondHomework;
-using epamTrainingSecond.ThirdHomework;
-using epamTrainingSecond.SixHomework;
-using TestDll1;
+using FirstHomework;
+using SecondHomework;
+using ThirdHomework;
+using FifthHomework;
+using SixHomework;
 
 namespace epamTrainingSecond
 {
@@ -14,11 +12,11 @@ namespace epamTrainingSecond
     {
         static void Main(string[] args)
         {
-            Logger logger = new Logger();
+            Log.Logger logger = new Log.Logger();
             try
             {
-                InnerInfoAboutClassesOutputer homework = new InnerInfoAboutClassesOutputer();
-                homework.Run();
+                InnerInfoAboutClassesOutputer outputer = new InnerInfoAboutClassesOutputer();
+                outputer.Run();
             }
             catch (Exception e)
             {

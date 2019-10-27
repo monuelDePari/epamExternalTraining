@@ -54,36 +54,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsolePrinter.cs" />
-    <Compile Include="FifthHomework\Car.cs" />
-    <Compile Include="FifthHomework\ISerializer.cs" />
-    <Compile Include="FifthHomework\BinarySerializer.cs" />
-    <Compile Include="FifthHomework\JsonSerializer.cs" />
-    <Compile Include="FifthHomework\XmlSerialization.cs" />
-    <Compile Include="FirstHomework\enumGetter.cs" />
-    <Compile Include="FirstHomework\FirstHomeworkRunner.cs" />
-    <Compile Include="FirstHomework\FirstTask.cs" />
-    <Compile Include="FirstHomework\ISize.cs" />
-    <Compile Include="FirstHomework\ICordinates.cs" />
-    <Compile Include="FirstHomework\Person.cs" />
-    <Compile Include="ILogger.cs" />
-    <Compile Include="IPrinter.cs" />
-    <Compile Include="IRunner.cs" />
-    <Compile Include="Logger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FirstHomework\Rectangle.cs" />
-    <Compile Include="FirstHomework\SecondTask.cs" />
-    <Compile Include="FirstHomework\ThirdTask.cs" />
-    <Compile Include="SecondHomework\ExceptionGenerator.cs" />
-    <Compile Include="SecondHomework\IExceptionGenerator.cs" />
-    <Compile Include="SecondHomework\SecondHomeworkRunner.cs" />
-    <Compile Include="SixHomework\InnerInfoAboutClassesOutputer.cs" />
-    <Compile Include="ThirdHomework\DirectorySearcher.cs" />
-    <Compile Include="ThirdHomework\FileByPartialNameFinder.cs" />
-    <Compile Include="ThirdHomework\IDirectorySearcher.cs" />
-    <Compile Include="ThirdHomework\IFileByPartialNameFinder.cs" />
-    <Compile Include="ThirdHomework\ThirdHomeworkRunner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -98,9 +70,33 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FifthHomework\FifthHomework.csproj">
+      <Project>{c855b014-1c37-4d4b-a253-4c8f4bc34611}</Project>
+      <Name>FifthHomework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FirstHomework\FirstHomework.csproj">
+      <Project>{71aa0b58-47e2-4d1d-8f32-218e318d69f8}</Project>
+      <Name>FirstHomework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Log\Log.csproj">
+      <Project>{56716e0f-4f6d-4545-852f-74e495e85ba6}</Project>
+      <Name>Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SecondHomework\SecondHomework.csproj">
+      <Project>{e5bbbe2d-9a5c-4959-83b0-7d1f25d9ebb5}</Project>
+      <Name>SecondHomework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SixHomework\SixHomework.csproj">
+      <Project>{49e96fd7-2fd8-4620-8e5c-44669d4eb6e8}</Project>
+      <Name>SixHomework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TestDll1\TestDll1.csproj">
       <Project>{6f80f72c-01c5-420d-8aa7-ba4813df83d3}</Project>
       <Name>TestDll1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ThirdHomework\ThirdHomework.csproj">
+      <Project>{b0906eee-2be2-442f-946a-5dc76d95f401}</Project>
+      <Name>ThirdHomework</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
