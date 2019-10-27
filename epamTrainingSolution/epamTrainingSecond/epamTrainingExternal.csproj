@@ -90,10 +90,6 @@
       <Project>{49e96fd7-2fd8-4620-8e5c-44669d4eb6e8}</Project>
       <Name>SixHomework</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TestDll1\TestDll1.csproj">
-      <Project>{6f80f72c-01c5-420d-8aa7-ba4813df83d3}</Project>
-      <Name>TestDll1</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ThirdHomework\ThirdHomework.csproj">
       <Project>{b0906eee-2be2-442f-946a-5dc76d95f401}</Project>
       <Name>ThirdHomework</Name>
