@@ -12,18 +12,9 @@ namespace epamTrainingSecond
     {
         static void Main(string[] args)
         {
-            Log.Logger logger = new Log.Logger();
-            try
-            {
-                InnerInfoAboutClassesOutputer outputer = new InnerInfoAboutClassesOutputer();
-                outputer.Run();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                logger.writeMessageLog(e);
-            }
-                Console.ReadKey();
+            SeventhHomework.Runner runner = new SeventhHomework.Runner();
+            runner.Run();
+            Console.ReadKey();
         }
     }
 }

@@ -86,9 +86,17 @@
       <Project>{e5bbbe2d-9a5c-4959-83b0-7d1f25d9ebb5}</Project>
       <Name>SecondHomework</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SeventhHomework\SeventhHomework.csproj">
+      <Project>{6188200d-8c8b-44e7-8ada-f53509aa978d}</Project>
+      <Name>SeventhHomework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SixHomework\SixHomework.csproj">
       <Project>{49e96fd7-2fd8-4620-8e5c-44669d4eb6e8}</Project>
       <Name>SixHomework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestDll1\TestDll1.csproj">
+      <Project>{6f80f72c-01c5-420d-8aa7-ba4813df83d3}</Project>
+      <Name>TestDll1</Name>
     </ProjectReference>
     <ProjectReference Include="..\ThirdHomework\ThirdHomework.csproj">
       <Project>{b0906eee-2be2-442f-946a-5dc76d95f401}</Project>

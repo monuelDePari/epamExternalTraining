@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B0906EEE-2BE2-442F-946A-5DC76D95F401}</ProjectGuid>
+    <ProjectGuid>{6F80F72C-01C5-420D-8AA7-BA4813DF83D3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ThirdHomework</RootNamespace>
-    <AssemblyName>ThirdHomework</AssemblyName>
+    <RootNamespace>TestDll1</RootNamespace>
+    <AssemblyName>TestDll1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,18 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DirectorySearcher.cs" />
-    <Compile Include="FileByPartialNameFinder.cs" />
-    <Compile Include="IDirectorySearcher.cs" />
-    <Compile Include="IFileByPartialNameFinder.cs" />
-    <Compile Include="IPrinter.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="enumGetter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Log\Log.csproj">
-      <Project>{56716e0f-4f6d-4545-852f-74e495e85ba6}</Project>
-      <Name>Log</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

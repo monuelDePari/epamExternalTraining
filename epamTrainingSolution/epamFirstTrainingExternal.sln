@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "epamTrainingExternal", "epamTrainingSecond\epamTrainingExternal.csproj", "{5402B00D-C5B3-4017-B506-058C7688EA3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDll1", "TestDll1\TestDll1.csproj", "{6F80F72C-01C5-420D-8AA7-BA4813DF83D3}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log", "Log\Log.csproj", "{56716E0F-4F6D-4545-852F-74E495E85BA6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Printer", "Printer\Printer.csproj", "{39465E49-C770-4BC9-8682-F093851EFBB8}"
@@ -19,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FifthHomework", "FifthHomew
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SixHomework", "SixHomework\SixHomework.csproj", "{49E96FD7-2FD8-4620-8E5C-44669D4EB6E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeventhHomework", "SeventhHomework\SeventhHomework.csproj", "{6188200D-8C8B-44E7-8ADA-F53509AA978D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,10 @@ Global
 		{5402B00D-C5B3-4017-B506-058C7688EA3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5402B00D-C5B3-4017-B506-058C7688EA3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5402B00D-C5B3-4017-B506-058C7688EA3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F80F72C-01C5-420D-8AA7-BA4813DF83D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F80F72C-01C5-420D-8AA7-BA4813DF83D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F80F72C-01C5-420D-8AA7-BA4813DF83D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F80F72C-01C5-420D-8AA7-BA4813DF83D3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{56716E0F-4F6D-4545-852F-74E495E85BA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{56716E0F-4F6D-4545-852F-74E495E85BA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56716E0F-4F6D-4545-852F-74E495E85BA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,6 +65,10 @@ Global
 		{49E96FD7-2FD8-4620-8E5C-44669D4EB6E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49E96FD7-2FD8-4620-8E5C-44669D4EB6E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49E96FD7-2FD8-4620-8E5C-44669D4EB6E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6188200D-8C8B-44E7-8ADA-F53509AA978D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6188200D-8C8B-44E7-8ADA-F53509AA978D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6188200D-8C8B-44E7-8ADA-F53509AA978D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6188200D-8C8B-44E7-8ADA-F53509AA978D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
