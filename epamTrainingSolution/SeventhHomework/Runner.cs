@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Diagnostics;
-
-namespace SeventhHomework
+﻿namespace SeventhHomework
 {
+    using System;
+    using System.Diagnostics;
+
     public class Runner
     {
-        private static System.Timers.Timer aTimer;
         public void Run()
         {
             Pointer<double> point1 = new Pointer<double>();

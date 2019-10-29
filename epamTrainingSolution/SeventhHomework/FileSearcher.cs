@@ -1,53 +1,57 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SeventhHomework
+﻿namespace SeventhHomework
 {
-    class FileSearcher
+    using System;
+    using System.Collections.Generic;
+    using System.Configuration;
+    using System.IO;
+    using System.Linq;
+
+    internal class FileSearcher
     {
-        List<string> firstDirectoryFiles;
-        List<string> secondDirectoryFiles;
-        void Print(string str)
-        {
-            Console.WriteLine(str);
-        }
+        private List<string> firstDirectoryFiles;
+        private List<string> secondDirectoryFiles;
+
         public void GetDirectories()
         {
-            firstDirectoryFiles = Directory.GetFiles(ConfigurationManager.AppSettings["PathForFirstDirectory"].ToString(), "*.xlsx", SearchOption.AllDirectories).ToList();
-            secondDirectoryFiles = Directory.GetFiles(ConfigurationManager.AppSettings["PathForSecondDirectory"].ToString(), "*.xlsx", SearchOption.AllDirectories).ToList();
-            for (int i = 0; i < firstDirectoryFiles.Count; i++)
+            this.firstDirectoryFiles = Directory.GetFiles(ConfigurationManager.AppSettings["PathForFirstDirectory"].ToString(), "*.xlsx", SearchOption.AllDirectories).ToList();
+            this.secondDirectoryFiles = Directory.GetFiles(ConfigurationManager.AppSettings["PathForSecondDirectory"].ToString(), "*.xlsx", SearchOption.AllDirectories).ToList();
+            for (int i = 0; i < this.firstDirectoryFiles.Count; i++)
             {
-                firstDirectoryFiles[i] = Path.GetFileName(firstDirectoryFiles[i]);
+                this.firstDirectoryFiles[i] = Path.GetFileName(this.firstDirectoryFiles[i]);
             }
-            for (int i = 0; i < secondDirectoryFiles.Count; i++)
+            for (int i = 0; i < this.secondDirectoryFiles.Count; i++)
             {
-                secondDirectoryFiles[i] = Path.GetFileName(secondDirectoryFiles[i]);
+                this.secondDirectoryFiles[i] = Path.GetFileName(this.secondDirectoryFiles[i]);
             }
         }
+
         public void FindDuplicates()
         {
-            List<string> duplicates = firstDirectoryFiles.Intersect(secondDirectoryFiles).ToList();
+            List<string> duplicates = this.firstDirectoryFiles.Intersect(this.secondDirectoryFiles).ToList();
             foreach (var item in duplicates)
             {
-                Print(item);
+                this.Print(item);
             }
-            Print("----------");
+            this.Print("----------");
         }
+
         public void FindUniqueFiles()
         {
-            var uniqueFiles = firstDirectoryFiles.Except(secondDirectoryFiles);
-            var uniqueFilesToCompare = secondDirectoryFiles.Except(firstDirectoryFiles);
+            var uniqueFiles = this.firstDirectoryFiles.Except(this.secondDirectoryFiles);
+            var uniqueFilesToCompare = this.secondDirectoryFiles.Except(this.firstDirectoryFiles);
             uniqueFiles = uniqueFiles.Concat(uniqueFilesToCompare);
+
             foreach (var item in uniqueFiles)
             {
-                Print(item);
+                this.Print(item);
             }
-            Print("----------");
+
+            this.Print("----------");
+        }
+
+        private void Print(string str)
+        {
+            Console.WriteLine(str);
         }
     }
 }

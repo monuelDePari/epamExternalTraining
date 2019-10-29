@@ -1,63 +1,68 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SeventhHomework
+﻿namespace SeventhHomework
 {
-    class Circle<T>
+    using System;
+
+    internal class Circle<T>
     {
-        void Print(string str)
+        public Circle()
         {
-            Console.WriteLine(str);
+            this.Pointer = new Pointer<T>();
         }
-        public Circle() 
-        {
-            pointer = new Pointer<T>();
-        }
+
         public Circle(Pointer<T> midPoint, double radius)
         {
-            pointer = new Pointer<T>();
-            pointer.XPoint = midPoint.XPoint;
-            pointer.YPoint = midPoint.YPoint;
+            this.Pointer = new Pointer<T>();
+            this.Pointer.XPoint = midPoint.XPoint;
+            this.Pointer.YPoint = midPoint.YPoint;
             this.Radius = radius;
         }
-        private double FindDistanceBetweenMidPointsOfTwoCircles(Circle<T> firstCircle, Circle<T> secondCircle)
-        {
-            return Math.Sqrt(Math.Pow(firstCircle.pointer.XPoint - secondCircle.pointer.XPoint, 2) + Math.Pow(firstCircle.pointer.YPoint - secondCircle.pointer.YPoint, 2));
-        }
+
         public void FindInsection(Circle<T> firstCircle, Circle<T> secondCircle)
         {
-            double diagonal = FindDistanceBetweenMidPointsOfTwoCircles(firstCircle, secondCircle);
+            double diagonal = this.FindDistanceBetweenMidPointsOfTwoCircles(firstCircle, secondCircle);
             if (diagonal > (firstCircle.Radius + secondCircle.Radius))
             {
-                Print("Circles are separate");
-            }else if(diagonal < Math.Abs(firstCircle.Radius - secondCircle.Radius))
+                this.Print("Circles are separate");
+            }
+            else if (diagonal < Math.Abs(firstCircle.Radius - secondCircle.Radius))
             {
-                Print("There are no solutions because one circle is contained within the other");
-            }else if(diagonal == 0 && firstCircle.Radius == secondCircle.Radius)
+                this.Print("There are no solutions because one circle is contained within the other");
+            }
+            else if (diagonal == 0 && firstCircle.Radius == secondCircle.Radius)
             {
-                Print("the circles are coincident and there are an infinite number of solutions");
-            }else
+                this.Print("the circles are coincident and there are an infinite number of solutions");
+            }
+            else
             {
                 double sideOfTriangle = (Math.Pow(firstCircle.Radius, 2) - Math.Pow(secondCircle.Radius, 2) + Math.Pow(diagonal, 2)) / (2 * diagonal);
                 double height = Math.Sqrt(Math.Pow(firstCircle.Radius, 2) - Math.Pow(sideOfTriangle, 2));
                 Pointer<T> point = new Pointer<T>();
-                point.XPoint = (int)(firstCircle.pointer.XPoint + sideOfTriangle * (secondCircle.pointer.XPoint - firstCircle.pointer.XPoint) / diagonal);
-                point.YPoint = (int)(firstCircle.pointer.YPoint + sideOfTriangle * (secondCircle.pointer.YPoint - firstCircle.pointer.YPoint) / diagonal);
-                Pointer<T> FirstIntersectionPoint = new Pointer<T>();
-                FirstIntersectionPoint.XPoint = point.XPoint + height * (secondCircle.pointer.YPoint - firstCircle.pointer.YPoint) / diagonal;
-                FirstIntersectionPoint.YPoint = point.YPoint + height * (secondCircle.pointer.XPoint - firstCircle.pointer.XPoint) / diagonal;
-                Print($"{FirstIntersectionPoint.XPoint} && {FirstIntersectionPoint.YPoint}");
-                Pointer<T> SecondIntersectionPoint = new Pointer<T>();
-                SecondIntersectionPoint.XPoint = point.XPoint - height * (secondCircle.pointer.YPoint - firstCircle.pointer.YPoint) / diagonal;
-                SecondIntersectionPoint.YPoint = point.YPoint - height * (secondCircle.pointer.XPoint - firstCircle.pointer.XPoint) / diagonal;
-                Print($"{SecondIntersectionPoint.XPoint} && {SecondIntersectionPoint.YPoint}");
+                point.XPoint = (int)(firstCircle.Pointer.XPoint + (sideOfTriangle * (secondCircle.Pointer.XPoint - firstCircle.Pointer.XPoint) / diagonal));
+                point.YPoint = (int)(firstCircle.Pointer.YPoint + (sideOfTriangle * (secondCircle.Pointer.YPoint - firstCircle.Pointer.YPoint) / diagonal));
+                Pointer<T> firstIntersectionPoint = new Pointer<T>();
+                firstIntersectionPoint.XPoint = point.XPoint + (height * (secondCircle.Pointer.YPoint - firstCircle.Pointer.YPoint) / diagonal);
+                firstIntersectionPoint.YPoint = point.YPoint + (height * (secondCircle.Pointer.XPoint - firstCircle.Pointer.XPoint) / diagonal);
+                Print($"{firstIntersectionPoint.XPoint} && {firstIntersectionPoint.YPoint}");
+                Pointer<T> secondIntersectionPoint = new Pointer<T>();
+                secondIntersectionPoint.XPoint = point.XPoint - (height * (secondCircle.Pointer.YPoint - firstCircle.Pointer.YPoint) / diagonal);
+                secondIntersectionPoint.YPoint = point.YPoint - (height * (secondCircle.Pointer.XPoint - firstCircle.Pointer.XPoint) / diagonal);
+                Print($"{secondIntersectionPoint.XPoint} && {secondIntersectionPoint.YPoint}");
             }
         }
-        public Pointer<T> pointer { get; set; }
+
+        private void Print(string str)
+        {
+            Console.WriteLine(str);
+        }
+
+
+        private double FindDistanceBetweenMidPointsOfTwoCircles(Circle<T> firstCircle, Circle<T> secondCircle)
+        {
+            return Math.Sqrt(Math.Pow(firstCircle.Pointer.XPoint - secondCircle.Pointer.XPoint, 2) + Math.Pow(firstCircle.Pointer.YPoint - secondCircle.Pointer.YPoint, 2));
+        }
+
+        public Pointer<T> Pointer { get; set; }
+
         public double Radius { get; set; }
 
     }
