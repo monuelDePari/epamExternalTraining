@@ -52,6 +52,8 @@ namespace SeventhHomework
         }
         public void DrawFigure()
         {
+            Console.ReadKey();
+            Console.Clear();
             string border = "╔", space = "", temp = "";
             for (int i = 0; i < FirstSide; i++)
             {
@@ -79,6 +81,38 @@ namespace SeventhHomework
             Console.Write(border);
             Console.ReadKey();
             Console.ResetColor();
+        }
+        public Rectangle<double> BuildFigureByIntersectionOfTwoFigures(Rectangle<double> firstRectangle, Rectangle<double> secondRectangle)
+        {
+            if (firstRectangle.LeftBottomPoint.YPoint > secondRectangle.RightTopPoint.YPoint || firstRectangle.RightTopPoint.YPoint < secondRectangle.LeftBottomPoint.YPoint || firstRectangle.RightTopPoint.XPoint > secondRectangle.LeftBottomPoint.XPoint || firstRectangle.LeftBottomPoint.XPoint < secondRectangle.RightTopPoint.XPoint)
+            {
+                return null;
+            }
+            else
+            {
+                Pointer<double> rightTopPoint = new Pointer<double>();
+                rightTopPoint.XPoint = Max(firstRectangle.RightTopPoint.XPoint, secondRectangle.RightTopPoint.XPoint);
+                rightTopPoint.YPoint = Min(firstRectangle.LeftBottomPoint.YPoint, secondRectangle.LeftBottomPoint.YPoint);
+                Pointer<double> leftBottomPoint = new Pointer<double>();
+                leftBottomPoint.XPoint = Min(firstRectangle.LeftBottomPoint.XPoint, secondRectangle.LeftBottomPoint.XPoint);
+                leftBottomPoint.YPoint = Max(firstRectangle.LeftBottomPoint.YPoint, secondRectangle.LeftBottomPoint.YPoint);
+                return new Rectangle<double>(leftBottomPoint, rightTopPoint);
+            }
+        }
+        double Min(double a, double b)
+        {
+            if (a < b)
+                return a;
+            else
+                return b;
+        }
+
+        double Max(double a, double b)
+        {
+            if (a > b)
+                return a;
+            else
+                return b;
         }
         public Pointer<double> LeftBottomPoint { get; set; }
         public Pointer<double> RightTopPoint { get; set; }
