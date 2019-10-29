@@ -3,7 +3,8 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 *.vs/
-*packages/
+packages/
+epamTrainingSolution/packages/
 # User-specific files
 *.rsuser
 *.suo
