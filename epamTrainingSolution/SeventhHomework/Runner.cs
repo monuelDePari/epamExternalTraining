@@ -20,7 +20,11 @@
 
             Stopwatch myTimer = new Stopwatch();
             myTimer.Start();
-            FileSearcher searcher = new FileSearcher();
+            //FileSearcherWithList searcher = new FileSearcherWithList();
+            //searcher.GetDirectories();
+            //searcher.FindDuplicates();
+            //searcher.FindUniqueFiles();
+            FileSearcherWithHashSet searcher = new FileSearcherWithHashSet();
             searcher.GetDirectories();
             searcher.FindDuplicates();
             searcher.FindUniqueFiles();
