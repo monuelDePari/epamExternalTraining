@@ -11,7 +11,7 @@ namespace SecondHomework
         public void Run()
         {
             ExceptionGenerator exceptionGenerator = new ExceptionGenerator();
-            Log.Logger log = new Log.Logger();
+            Logger.FileLogger log = new Logger.FileLogger();
             try
             {
                 exceptionGenerator.StackOverflow();

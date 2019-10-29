@@ -54,11 +54,5 @@
     <Compile Include="SecondTask.cs" />
     <Compile Include="ThirdTask.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Log\Log.csproj">
-      <Project>{556ad151-d2f8-469a-a535-b969d6f9bce7}</Project>
-      <Name>Log</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

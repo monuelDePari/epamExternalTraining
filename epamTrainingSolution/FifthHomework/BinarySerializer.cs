@@ -13,7 +13,7 @@ namespace FifthHomework
     public class BinarySerializer : ISerializer, IPrinter
     {
         List<Car> listOfCars = new List<Car>();
-        Log.Logger logger = new Log.Logger();
+        Logger.FileLogger logger = new Logger.FileLogger();
         public void Deserializate()
         {
             try

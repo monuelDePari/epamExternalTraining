@@ -11,7 +11,7 @@ namespace HomeworkEight
     class FileCalculator : ICalculator
     {
         List<double> listOfNumeric = new List<double>(2);
-        Log.Logger logger = new Log.Logger();
+        Logger.FileLogger logger = new Logger.FileLogger();
         public FileCalculator() { }
         void Print(string str)
         {

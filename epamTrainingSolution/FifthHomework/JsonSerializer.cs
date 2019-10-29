@@ -11,7 +11,7 @@ namespace FifthHomework
 {
     public class JsonSerializer : ISerializer, IPrinter
     {
-        Log.Logger logger = new Log.Logger();
+        Logger.FileLogger logger = new Logger.FileLogger();
         public void Deserializate()
         {
             try

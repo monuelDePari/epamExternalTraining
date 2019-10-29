@@ -5,6 +5,7 @@ using SecondHomework;
 using ThirdHomework;
 using FifthHomework;
 using SixHomework;
+using Logger;
 
 namespace epamTrainingSecond
 {
@@ -14,8 +15,15 @@ namespace epamTrainingSecond
         {
             //SeventhHomework.Runner runner = new SeventhHomework.Runner();
             //runner.Run();
-            FifthHomework.FifthHomeworkRunner runner = new FifthHomework.FifthHomeworkRunner();
-            runner.Run();
+            FileLogger logger = new FileLogger();
+            try
+            {
+                FifthHomework.FifthHomeworkRunner runner = new FifthHomework.FifthHomeworkRunner();
+                runner.Run();
+            }catch(Exception e)
+            {
+                logger.writeMessageLog(e);
+            }
             Console.ReadKey();
         }
     }

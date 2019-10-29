@@ -8,7 +8,7 @@ namespace HomeworkEight
 {
     class ConsoleCalculator : ICalculator
     {
-        Log.Logger logger = new Log.Logger();
+        Logger.FileLogger logger = new Logger.FileLogger();
         public void Input()
         {
             try

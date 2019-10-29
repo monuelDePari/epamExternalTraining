@@ -7,7 +7,7 @@ namespace ThirdHomework
     class FileByPartialNameFinder : IFileByPartialNameFinder, IPrinter
     {
         public string Path { get; set; }
-        Log.Logger logger = new Log.Logger();
+        Logger.FileLogger logger = new Logger.FileLogger();
         List<FileInfo> findedFilesByPartialName = new List<FileInfo>();
         public FileByPartialNameFinder()
         {

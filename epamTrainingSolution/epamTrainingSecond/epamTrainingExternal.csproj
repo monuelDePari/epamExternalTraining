@@ -82,9 +82,9 @@
       <Project>{7b2f3205-ae1d-4d1b-9106-6d3f286184be}</Project>
       <Name>HomeworkEight</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Log\Log.csproj">
-      <Project>{556ad151-d2f8-469a-a535-b969d6f9bce7}</Project>
-      <Name>Log</Name>
+    <ProjectReference Include="..\Logger\Logger.csproj">
+      <Project>{7d7be487-c782-45d3-86e0-3fe51ec450ef}</Project>
+      <Name>Logger</Name>
     </ProjectReference>
     <ProjectReference Include="..\SecondHomework\SecondHomework.csproj">
       <Project>{e5bbbe2d-9a5c-4959-83b0-7d1f25d9ebb5}</Project>

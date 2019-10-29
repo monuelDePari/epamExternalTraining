@@ -6,7 +6,7 @@ namespace ThirdHomework
     class DirectorySearcher : IDirectorySearcher, IPrinter
     {
         //private static readonly NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
-        Log.Logger logger = new Log.Logger();
+        Logger.FileLogger logger = new Logger.FileLogger();
         public string Path { get; set; }
         public DirectorySearcher()
         {
