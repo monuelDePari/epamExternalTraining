@@ -9,7 +9,7 @@ using System.Xml.Serialization;
 
 namespace FifthHomework
 {
-    class XmlSerialization : ISerializer, IPrinter
+    public class XmlSerialization : ISerializer, IPrinter
     {
         List<Car> listOfCars = new List<Car>();
         Log.Logger logger = new Log.Logger();

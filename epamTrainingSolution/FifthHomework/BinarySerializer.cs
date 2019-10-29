@@ -10,7 +10,7 @@ using System.Xml.Serialization;
 
 namespace FifthHomework
 {
-    class BinarySerializer : ISerializer, IPrinter
+    public class BinarySerializer : ISerializer, IPrinter
     {
         List<Car> listOfCars = new List<Car>();
         Log.Logger logger = new Log.Logger();

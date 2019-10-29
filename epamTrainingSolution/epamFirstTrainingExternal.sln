@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2026
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "epamTrainingExternal", "epamTrainingSecond\epamTrainingExternal.csproj", "{5402B00D-C5B3-4017-B506-058C7688EA3A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDll1", "TestDll1\TestDll1.csproj", "{6F80F72C-01C5-420D-8AA7-BA4813DF83D3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Printer", "Printer\Printer.csproj", "{39465E49-C770-4BC9-8682-F093851EFBB8}"
 EndProject
@@ -21,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SixHomework", "SixHomework\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeventhHomework", "SeventhHomework\SeventhHomework.csproj", "{6188200D-8C8B-44E7-8ADA-F53509AA978D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log", "Log\Log.csproj", "{556AD151-D2F8-469A-A535-B969D6F9BCE7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log", "Log\Log.csproj", "{56716E0F-4F6D-4545-852F-74E495E85BA6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeworkEight", "HomeworkEight\HomeworkEight.csproj", "{7B2F3205-AE1D-4D1B-9106-6D3F286184BE}"
 EndProject
@@ -35,10 +33,6 @@ Global
 		{5402B00D-C5B3-4017-B506-058C7688EA3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5402B00D-C5B3-4017-B506-058C7688EA3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5402B00D-C5B3-4017-B506-058C7688EA3A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6F80F72C-01C5-420D-8AA7-BA4813DF83D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F80F72C-01C5-420D-8AA7-BA4813DF83D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F80F72C-01C5-420D-8AA7-BA4813DF83D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F80F72C-01C5-420D-8AA7-BA4813DF83D3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{39465E49-C770-4BC9-8682-F093851EFBB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{39465E49-C770-4BC9-8682-F093851EFBB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39465E49-C770-4BC9-8682-F093851EFBB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -67,10 +61,10 @@ Global
 		{6188200D-8C8B-44E7-8ADA-F53509AA978D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6188200D-8C8B-44E7-8ADA-F53509AA978D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6188200D-8C8B-44E7-8ADA-F53509AA978D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{556AD151-D2F8-469A-A535-B969D6F9BCE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{556AD151-D2F8-469A-A535-B969D6F9BCE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{556AD151-D2F8-469A-A535-B969D6F9BCE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{556AD151-D2F8-469A-A535-B969D6F9BCE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56716E0F-4F6D-4545-852F-74E495E85BA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56716E0F-4F6D-4545-852F-74E495E85BA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56716E0F-4F6D-4545-852F-74E495E85BA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56716E0F-4F6D-4545-852F-74E495E85BA6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7B2F3205-AE1D-4D1B-9106-6D3F286184BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7B2F3205-AE1D-4D1B-9106-6D3F286184BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B2F3205-AE1D-4D1B-9106-6D3F286184BE}.Release|Any CPU.ActiveCfg = Release|Any CPU

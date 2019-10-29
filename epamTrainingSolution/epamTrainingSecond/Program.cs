@@ -14,7 +14,7 @@ namespace epamTrainingSecond
         {
             //SeventhHomework.Runner runner = new SeventhHomework.Runner();
             //runner.Run();
-            HomeworkEight.Runner runner = new HomeworkEight.Runner();
+            FifthHomework.FifthHomeworkRunner runner = new FifthHomework.FifthHomeworkRunner();
             runner.Run();
             Console.ReadKey();
         }
