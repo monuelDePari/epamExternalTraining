@@ -12,7 +12,9 @@ namespace epamTrainingSecond
     {
         static void Main(string[] args)
         {
-            SeventhHomework.Runner runner = new SeventhHomework.Runner();
+            //SeventhHomework.Runner runner = new SeventhHomework.Runner();
+            //runner.Run();
+            HomeworkEight.Runner runner = new HomeworkEight.Runner();
             runner.Run();
             Console.ReadKey();
         }
