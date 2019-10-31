@@ -22,9 +22,10 @@ namespace HomeworkEight
         {
             if (!File.Exists(ConfigurationManager.AppSettings["PathToCalculationFile"].ToString()))
                 File.Create(ConfigurationManager.AppSettings["PathToCalculationFile"].ToString());
+            File.WriteAllText(ConfigurationManager.AppSettings["PathToCalculationFile"].ToString(), String.Empty);
             try
             {
-                using (StreamWriter streamWriter = File.AppendText(ConfigurationManager.AppSettings["PathToLog"].ToString()))
+                using (StreamWriter streamWriter = File.AppendText(ConfigurationManager.AppSettings["PathToCalculationFile"].ToString()))
                 {
                     FirstNumeric = Convert.ToDouble(Console.ReadLine());
                     streamWriter.WriteLine(FirstNumeric);

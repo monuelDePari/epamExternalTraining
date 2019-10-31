@@ -42,8 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsoleCalculator.cs" />
+    <Compile Include="ConsoleCalculatorV2.cs" />
     <Compile Include="FileCalculator.cs" />
     <Compile Include="ICalculator.cs" />
+    <Compile Include="ICalculatorV2.cs" />
     <Compile Include="Runner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

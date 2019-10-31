@@ -18,7 +18,7 @@ namespace epamTrainingSecond
             FileLogger logger = new FileLogger();
             try
             {
-                FifthHomework.FifthHomeworkRunner runner = new FifthHomework.FifthHomeworkRunner();
+                HomeworkEight.Runner runner = new HomeworkEight.Runner();
                 runner.Run();
             }catch(Exception e)
             {
