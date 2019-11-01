@@ -41,9 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculatorV2.cs" />
     <Compile Include="ConsoleCalculator.cs" />
     <Compile Include="FileCalculator.cs" />
+    <Compile Include="FileCalculatorV2.cs" />
     <Compile Include="ICalculator.cs" />
+    <Compile Include="ICalculatorV2.cs" />
     <Compile Include="Runner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

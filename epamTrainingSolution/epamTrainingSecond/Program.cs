@@ -15,16 +15,8 @@ namespace epamTrainingSecond
         {
             //SeventhHomework.Runner runner = new SeventhHomework.Runner();
             //runner.Run();
-            FileLogger logger = new FileLogger();
-            try
-            {
-                FifthHomework.FifthHomeworkRunner runner = new FifthHomework.FifthHomeworkRunner();
-                runner.Run();
-            }catch(Exception e)
-            {
-                logger.writeMessageLog(e);
-            }
-            Console.ReadKey();
+            HomeworkEight.Runner runner = new HomeworkEight.Runner();
+            runner.Run();
         }
     }
 }

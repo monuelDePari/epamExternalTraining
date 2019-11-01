@@ -22,14 +22,16 @@ namespace HomeworkEight
         {
             if (!File.Exists(ConfigurationManager.AppSettings["PathToCalculationFile"].ToString()))
                 File.Create(ConfigurationManager.AppSettings["PathToCalculationFile"].ToString());
+            File.WriteAllText(ConfigurationManager.AppSettings["PathToCalculationFile"].ToString(), String.Empty);
             try
             {
-                using (StreamWriter streamWriter = File.AppendText(ConfigurationManager.AppSettings["PathToLog"].ToString()))
+                using (StreamWriter streamWriter = File.AppendText(ConfigurationManager.AppSettings["PathToCalculationFile"].ToString()))
                 {
                     FirstNumeric = Convert.ToDouble(Console.ReadLine());
                     streamWriter.WriteLine(FirstNumeric);
                     SecondNumeric = Convert.ToDouble(Console.ReadLine());
                     streamWriter.WriteLine(SecondNumeric);
+
                 }
             }
             catch (UnauthorizedAccessException e)
@@ -53,10 +55,6 @@ namespace HomeworkEight
                 while ((line = streamReader.ReadLine()) != null)
                 {
                     listOfNumeric.Add(double.Parse(line));
-                }
-                foreach (var item in listOfNumeric)
-                {
-                    Print($"{item}");
                 }
                 return listOfNumeric[0] / listOfNumeric[1];
             }

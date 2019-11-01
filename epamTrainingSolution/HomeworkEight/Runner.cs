@@ -21,7 +21,6 @@ namespace HomeworkEight
             Print($"{calculator.CalculateMinus()}");
             Print($"{calculator.CalculateMultiplication()}");
             Print($"{calculator.CalculatePlus()}");
-            Console.ReadKey();
             FileCalculator fileCalculator = new FileCalculator();
             fileCalculator.Input();
             Print($"{fileCalculator.CalculateDivide()}");
