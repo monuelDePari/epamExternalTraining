@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="CalculatorV2.cs" />
     <Compile Include="ConsoleCalculator.cs" />
+    <Compile Include="ConsoleCalculatorV2.cs" />
     <Compile Include="FileCalculator.cs" />
     <Compile Include="FileCalculatorV2.cs" />
     <Compile Include="ICalculator.cs" />

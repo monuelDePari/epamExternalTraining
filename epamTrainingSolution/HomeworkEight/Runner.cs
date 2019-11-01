@@ -15,6 +15,7 @@ namespace HomeworkEight
 
         public void Run()
         {
+<<<<<<< HEAD
             ConsoleCalculator calculator = new ConsoleCalculator();
             calculator.Input();
             Print($"{calculator.CalculateDivide()}");
@@ -28,6 +29,24 @@ namespace HomeworkEight
             Print($"{fileCalculator.CalculateMultiplication()}");
             Print($"{fileCalculator.CalculatePlus()}");
             Console.ReadKey();
+=======
+            ConsoleCalculatorV2 consoleCalculator = new ConsoleCalculatorV2();
+            Console.WriteLine(consoleCalculator.Calculate(consoleCalculator.Input()));
+            //ConsoleCalculator calculator = new ConsoleCalculator();
+            //calculator.Input();
+            //Print($"{calculator.CalculateDivide()}");
+            //Print($"{calculator.CalculateMinus()}");
+            //Print($"{calculator.CalculateMultiplication()}");
+            //Print($"{calculator.CalculatePlus()}");
+            //Console.ReadKey();
+            //FileCalculator fileCalculator = new FileCalculator();
+            //fileCalculator.Input();
+            //Print($"{fileCalculator.CalculateDivide()}");
+            //Print($"{fileCalculator.CalculateMinus()}");
+            //Print($"{fileCalculator.CalculateMultiplication()}");
+            //Print($"{fileCalculator.CalculatePlus()}");
+            //Console.ReadKey();
+>>>>>>> origin
         }
     }
 }
