@@ -48,5 +48,25 @@ namespace Logger
                 Console.WriteLine(e.Message);
             }
         }
+
+        public void writeMessageLog(Exception exception, string message)
+        {
+            if (!File.Exists(ConfigurationManager.AppSettings["PathToLog"].ToString()))
+                File.Create(ConfigurationManager.AppSettings["PathToLog"].ToString());
+
+            try
+            {
+                using (StreamWriter streamWriter = File.AppendText(ConfigurationManager.AppSettings["PathToLog"].ToString()))
+                {
+                    streamWriter.WriteLine($"Exception message: {exception.Message}, Your message: {message}");
+
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("File could not be written");
+                Console.WriteLine(e.Message);
+            }
+        }
     }
 }

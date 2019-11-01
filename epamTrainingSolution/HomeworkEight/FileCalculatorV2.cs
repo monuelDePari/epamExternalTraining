@@ -11,7 +11,7 @@ namespace HomeworkEight
 {
     class FileCalculatorV2 : ICalculatorV2
     {
-
+        Logger.FileLogger fileLogger = new Logger.FileLogger();
         public object CalculateExpression(string expression)
         {
             using (TextReader streamReader = File.OpenText(ConfigurationManager.AppSettings["PathToCalculationFile"].ToString()))
@@ -42,9 +42,12 @@ namespace HomeworkEight
             }
             catch (UnauthorizedAccessException e)
             {
-                Print("File could not be written");
                 Print(e.Message);
-                logger.writeMessageLog(e);
+                fileLogger.writeMessageLog(e, "File could not be written");
+            }catch(Exception e)
+            {
+                Print(e.Message);
+                fileLogger.writeMessageLog(e);
             }
             return expression;
         }

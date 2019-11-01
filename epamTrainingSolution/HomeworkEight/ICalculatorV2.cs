@@ -8,11 +8,7 @@ namespace HomeworkEight
 {
     interface ICalculatorV2
     {
-<<<<<<< HEAD
-        object CalculateExpression(string expression);
-=======
         object Calculate(string expression);
->>>>>>> origin
         string Input();
     }
 }

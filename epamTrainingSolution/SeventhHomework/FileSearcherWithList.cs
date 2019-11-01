@@ -10,42 +10,67 @@
     {
         private List<string> firstDirectoryFiles;
         private List<string> secondDirectoryFiles;
+        Logger.FileLogger logger = new Logger.FileLogger();
 
         public void GetDirectories()
         {
-            this.firstDirectoryFiles = Directory.GetFiles(ConfigurationManager.AppSettings["PathForFirstDirectory"].ToString(), "*.xlsx", SearchOption.AllDirectories).ToList();
-            this.secondDirectoryFiles = Directory.GetFiles(ConfigurationManager.AppSettings["PathForSecondDirectory"].ToString(), "*.xlsx", SearchOption.AllDirectories).ToList();
-            for (int i = 0; i < this.firstDirectoryFiles.Count; i++)
+            try
             {
-                this.firstDirectoryFiles[i] = Path.GetFileName(this.firstDirectoryFiles[i]);
-            }
-            for (int i = 0; i < this.secondDirectoryFiles.Count; i++)
+                this.firstDirectoryFiles = Directory.GetFiles(ConfigurationManager.AppSettings["PathForFirstDirectory"].ToString(), "*.xlsx", SearchOption.AllDirectories).ToList();
+                this.secondDirectoryFiles = Directory.GetFiles(ConfigurationManager.AppSettings["PathForSecondDirectory"].ToString(), "*.xlsx", SearchOption.AllDirectories).ToList();
+                for (int i = 0; i < this.firstDirectoryFiles.Count; i++)
+                {
+                    this.firstDirectoryFiles[i] = Path.GetFileName(this.firstDirectoryFiles[i]);
+                }
+                for (int i = 0; i < this.secondDirectoryFiles.Count; i++)
+                {
+                    this.secondDirectoryFiles[i] = Path.GetFileName(this.secondDirectoryFiles[i]);
+                }
+            }catch(NullReferenceException e)
             {
-                this.secondDirectoryFiles[i] = Path.GetFileName(this.secondDirectoryFiles[i]);
+                logger.writeMessageLog(e);
+                Print(e.Message);
+            }catch(DirectoryNotFoundException e)
+            {
+                logger.writeMessageLog(e);
+                Print(e.Message);
             }
         }
 
         public void FindDuplicates()
         {
-            List<string> duplicates = this.firstDirectoryFiles.Intersect(this.secondDirectoryFiles).ToList();
-            foreach (var item in duplicates)
+            try
             {
-                this.Print(item);
+                List<string> duplicates = this.firstDirectoryFiles.Intersect(this.secondDirectoryFiles).ToList();
+                foreach (var item in duplicates)
+                {
+                    this.Print(item);
+                }
+            }catch(NullReferenceException e)
+            {
+                logger.writeMessageLog(e);
+                Print(e.Message);
             }
             this.Print("----------");
         }
 
         public void FindUniqueFiles()
         {
-            var uniqueFiles = this.firstDirectoryFiles.Except(this.secondDirectoryFiles);
-            var uniqueFilesToCompare = this.secondDirectoryFiles.Except(this.firstDirectoryFiles);
-            uniqueFiles = uniqueFiles.Concat(uniqueFilesToCompare);
-
-            foreach (var item in uniqueFiles)
+            try
             {
-                this.Print(item);
-            }
+                var uniqueFiles = this.firstDirectoryFiles.Except(this.secondDirectoryFiles);
+                var uniqueFilesToCompare = this.secondDirectoryFiles.Except(this.firstDirectoryFiles);
+                uniqueFiles = uniqueFiles.Concat(uniqueFilesToCompare);
 
+                foreach (var item in uniqueFiles)
+                {
+                    this.Print(item);
+                }
+            }catch(NullReferenceException e)
+            {
+                logger.writeMessageLog(e);
+                Print(e.Message);
+            }
             this.Print("----------");
         }
 

@@ -8,6 +8,7 @@ namespace SeventhHomework
 
     internal class Rectangle<T>
     {
+        Logger.FileLogger logger = new Logger.FileLogger();
         public void Print(string str)
         {
             Console.WriteLine(str);
@@ -21,26 +22,44 @@ namespace SeventhHomework
 
         public void GetSideLength()
         {
-            this.FirstSide = Math.Sqrt(Math.Pow(this.RightTopPoint.XPoint - this.LeftBottomPoint.XPoint, 2) + Math.Pow(this.RightTopPoint.YPoint - this.RightTopPoint.YPoint, 2));
-            this.SecondSide = Math.Sqrt(Math.Pow(this.RightTopPoint.XPoint - this.RightTopPoint.XPoint, 2) + Math.Pow(this.RightTopPoint.YPoint - this.LeftBottomPoint.YPoint, 2));
-            this.Print($"{this.FirstSide}");
-            this.Print($"{this.SecondSide}");
+            try
+            {
+                this.FirstSide = Math.Sqrt(Math.Pow(this.RightTopPoint.XPoint - this.LeftBottomPoint.XPoint, 2) + Math.Pow(this.RightTopPoint.YPoint - this.RightTopPoint.YPoint, 2));
+                this.SecondSide = Math.Sqrt(Math.Pow(this.RightTopPoint.XPoint - this.RightTopPoint.XPoint, 2) + Math.Pow(this.RightTopPoint.YPoint - this.LeftBottomPoint.YPoint, 2));
+                this.Print($"{this.FirstSide}");
+                this.Print($"{this.SecondSide}");
+            } catch(Exception e)
+            {
+                logger.writeMessageLog(e);
+            }
         }
 
         public void ChangeSideLength(double numberToChangeFirstSide, double numberToChangeSecondSide)
         {
-            this.FirstSide = numberToChangeFirstSide;
-            this.SecondSide = numberToChangeSecondSide;
-            this.RightTopPoint.XPoint = this.LeftBottomPoint.XPoint + numberToChangeFirstSide;
-            this.RightTopPoint.YPoint = this.LeftBottomPoint.YPoint + numberToChangeSecondSide;
+            try
+            {
+                this.FirstSide = numberToChangeFirstSide;
+                this.SecondSide = numberToChangeSecondSide;
+                this.RightTopPoint.XPoint = this.LeftBottomPoint.XPoint + numberToChangeFirstSide;
+                this.RightTopPoint.YPoint = this.LeftBottomPoint.YPoint + numberToChangeSecondSide;
+            }catch(Exception e)
+            {
+                logger.writeMessageLog(e);
+            }
         }
 
         public void MoveFigure(double numberToMoveFigureByX, double numberToMoveFigureByY)
         {
-            this.LeftBottomPoint.XPoint += numberToMoveFigureByX;
-            this.LeftBottomPoint.YPoint += numberToMoveFigureByY;
-            this.RightTopPoint.XPoint += numberToMoveFigureByX;
-            this.RightTopPoint.YPoint += numberToMoveFigureByY;
+            try
+            {
+                this.LeftBottomPoint.XPoint += numberToMoveFigureByX;
+                this.LeftBottomPoint.YPoint += numberToMoveFigureByY;
+                this.RightTopPoint.XPoint += numberToMoveFigureByX;
+                this.RightTopPoint.YPoint += numberToMoveFigureByY;
+            }catch(Exception e)
+            {
+                logger.writeMessageLog(e);
+            }
         }
 
         public void BuildLessFigure(Rectangle<double> firstRectangleToCompare, Rectangle<double> secondRectangleToCompare)

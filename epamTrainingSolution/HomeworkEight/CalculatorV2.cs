@@ -9,7 +9,7 @@ namespace HomeworkEight
 {
     class CalculatorV2 : ICalculatorV2
     {
-        public object CalculateExpression(string expression)
+        public object Calculate(string expression)
         {
             DataTable dataTable = new DataTable();
             var resultOfExpression = dataTable.Compute(expression, "");

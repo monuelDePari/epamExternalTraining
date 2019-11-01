@@ -13,15 +13,13 @@ namespace epamTrainingSecond
     {
         static void Main(string[] args)
         {
-            //SeventhHomework.Runner runner = new SeventhHomework.Runner();
-            //runner.Run();
-<<<<<<< HEAD
-            HomeworkEight.Runner runner = new HomeworkEight.Runner();
-            runner.Run();
-=======
             FileLogger logger = new FileLogger();
             try
             {
+                FirstHomework.FirstTrainingRunner firstTraining = new FirstTrainingRunner();
+                firstTraining.Run();
+                SecondHomework.SecondTrainingRunner trainingRunner = new SecondTrainingRunner();
+                trainingRunner.Run();
                 HomeworkEight.Runner runner = new HomeworkEight.Runner();
                 runner.Run();
             }catch(Exception e)
@@ -29,7 +27,6 @@ namespace epamTrainingSecond
                 logger.writeMessageLog(e);
             }
             Console.ReadKey();
->>>>>>> origin
         }
     }
 }
