@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logger
 {
-    interface ICommonLogger : ILogger
+    class AsyncFileLogger
     {
-        void readMessageLog();
-        void writeMessageLog(Exception exception);
     }
 }
