@@ -12,7 +12,7 @@ namespace HomeworkEight
     class FileCalculatorV2 : ICalculatorV2
     {
         Logger.FileLogger fileLogger = new Logger.FileLogger();
-        public object CalculateExpression(string expression)
+        public object Calculate(string expression)
         {
             using (TextReader streamReader = File.OpenText(ConfigurationManager.AppSettings["PathToCalculationFile"].ToString()))
             {

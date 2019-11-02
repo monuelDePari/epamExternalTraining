@@ -16,14 +16,11 @@ namespace epamTrainingSecond
             FileLogger logger = new FileLogger();
             try
             {
-                FirstHomework.FirstTrainingRunner firstTraining = new FirstTrainingRunner();
-                firstTraining.Run();
-                SecondHomework.SecondTrainingRunner trainingRunner = new SecondTrainingRunner();
-                trainingRunner.Run();
-                HomeworkEight.Runner runner = new HomeworkEight.Runner();
+                NinthHomework.Runner runner = new NinthHomework.Runner();
                 runner.Run();
             }catch(Exception e)
             {
+                Console.WriteLine(e.Message);
                 logger.writeMessageLog(e);
             }
             Console.ReadKey();
