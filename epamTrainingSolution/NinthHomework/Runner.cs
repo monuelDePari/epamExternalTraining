@@ -11,7 +11,7 @@ namespace NinthHomework
         public void Run()
         {
             ThreadSummarizer summarizer = new ThreadSummarizer();
-            summarizer.StartThreads(4);
+            summarizer.StartThreads(4, 52, 52);
             summarizer.PrintSum();
         }
     }

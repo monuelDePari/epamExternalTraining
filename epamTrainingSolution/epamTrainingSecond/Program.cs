@@ -6,6 +6,7 @@ using ThirdHomework;
 using FifthHomework;
 using SixHomework;
 using Logger;
+using System.Threading;
 
 namespace epamTrainingSecond
 {
