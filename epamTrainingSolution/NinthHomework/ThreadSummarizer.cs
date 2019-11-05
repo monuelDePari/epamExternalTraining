@@ -9,92 +9,72 @@ namespace NinthHomework
 {
     class ThreadSummarizer
     {
-        int columns = 0;
-        double sumOfNumerics;
-        Logger.FileLogger logger = new Logger.FileLogger();
+        double[,] a;
+        public int k = 0, c;
+        public double result = 0;
+        public byte x = 0, y = 1;
+
         public double[,] FillNumericsToArray(int n, int m)
         {
-            double[,] array = new double[n, m];
+            a = new double[n, m];
             Random random = new Random();
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < m; j++)
                 {
-                    array[i, j] = random.Next(1, 1000);
-                    //Console.Write($"{array[i, j]} ");
+                    a[i, j] = random.Next(1, 100);
                 }
-                //Console.WriteLine();
             }
-            return array;
+            return a;
         }
-        public double[,] IntersectArray(int k, int i, double[,] array)
+
+        public double ThreadItem(int i)
         {
-            int n = 0;
-            if (i <= k && i >= 0)
+            double res = 0;
+            int r = i * c + c;
+            if (i == k - 1) { r = a.GetLength(x); }
+            for (int j = i * c; j < r; j++)
             {
-                n = i * array.GetLength(0) / k;
-                //m = (i + 1) * array.GetLength(0);
-                double[,] newArray = new double[array.GetLength(0) / k, array.GetLength(1)];
-                Console.WriteLine(newArray.GetLength(0));
-                for (int a = 0; a < newArray.GetLength(0); a++)
+                for (int e = 0; e < a.GetLength(y); e++)
                 {
-                    for (int b = 0; b < array.GetLength(1); b++)
-                    {
-                        if ((n + a) <= array.GetLength(0))
-                        {
-                            try
-                            {
-                                newArray[a, b] = array[n + a, b];
-                            }
-                            catch(IndexOutOfRangeException e)
-                            {
-                                logger.writeMessageLog(e);
-                            }
-                            //newArray[a, b] = array[(n + a), b];
-                        }
-                        //Console.Write($"{newArray[a, b]} ");
-                    }
-                    //Console.WriteLine();
+                    if (y == 0) { res += a[e, j]; }
+                    else { res += a[j, e]; }
                 }
-                return newArray;
-            } else if (i == k)
-            {
-                columns += array.GetLength(0) % k;
-                double[,] newArray = new double[array.GetLength(0) - (k-1)*array.GetLength(0) / k + columns, array.GetLength(1)];
-                n = (i - 1) * array.GetLength(0) / k;
-                for (int a = 0; a < newArray.GetLength(0); a++)
-                {
-                    for (int b = 0; b < newArray.GetLength(1); b++)
-                    {
-                        newArray[a, b] = array[n + a, b];
-                    }
-                }
-                return newArray;
             }
-            return null;
+            result += res;
+            return res;
         }
-        public void StartThreads(int numericOfThreads, int n, int m)
+
+        public void FindSum(int n, int m, int k)
         {
-            double[,] arrayToFindSum = FillNumericsToArray(n, m);
-            List<Thread> listOfThreads = new List<Thread>(numericOfThreads);
-            for (int i = 0; i < numericOfThreads; i++)
+            if (a == null)
+                FillNumericsToArray(n, m);
+
+            if (a.GetLength(1) > a.GetLength(0))
             {
-                listOfThreads.Add(new Thread(() => FindSumOfTwoDimensionalArray(IntersectArray(numericOfThreads, i, arrayToFindSum))));
-                listOfThreads[i].Start();
-                Console.WriteLine($"Thread is alive: {listOfThreads[i].IsAlive}");
-                //Console.WriteLine($"new thread created {i}");
+                x = 1;
+                y = 0;
+            }
+
+            if (k < 1) { k = 1; }
+            else if (k > a.GetLength(x)) { k = a.GetLength(x); }
+            this.k = k;
+
+            c = (int)Math.Round((double)a.GetLength(x) / k);
+
+            for (int i = 0; i < k; i++)
+            {
+                int ii = i;
+                ThreadStart ts = new ThreadStart(() => ThreadItem(ii));
+                Thread t = new Thread(ts);
+                t.Start();
+                t.Join();
             }
         }
+
         public void PrintSum()
         {
-            Console.WriteLine(sumOfNumerics);
-        }
-        public void FindSumOfTwoDimensionalArray(double[,] array)
-        {
-            foreach (var item in array)
-            {
-                sumOfNumerics += item;
-            }
+            Console.WriteLine($"Sum of array: {result}");
         }
     }
 }
