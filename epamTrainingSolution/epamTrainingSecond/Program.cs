@@ -7,6 +7,7 @@ using FifthHomework;
 using SixHomework;
 using Logger;
 using System.Threading;
+using IocContainerAndRefactoringHomework;
 
 namespace epamTrainingSecond
 {
@@ -17,8 +18,8 @@ namespace epamTrainingSecond
             FileLogger logger = new FileLogger();
             try
             {
-                NinthHomework.Runner runner = new NinthHomework.Runner();
-                runner.Run();
+                Runner runner = new Runner();
+                runner.RunTask();
             }catch(Exception e)
             {
                 Console.WriteLine(e.Message);

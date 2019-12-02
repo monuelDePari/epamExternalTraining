@@ -82,6 +82,10 @@
       <Project>{7b2f3205-ae1d-4d1b-9106-6d3f286184be}</Project>
       <Name>HomeworkEight</Name>
     </ProjectReference>
+    <ProjectReference Include="..\IocContainerAndRefactoringHomework\IocContainerAndRefactoringHomework.csproj">
+      <Project>{e9a64542-62c6-4dc4-a662-03f7ec01044b}</Project>
+      <Name>IocContainerAndRefactoringHomework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Logger\Logger.csproj">
       <Project>{7d7be487-c782-45d3-86e0-3fe51ec450ef}</Project>
       <Name>Logger</Name>
