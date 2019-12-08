@@ -7,7 +7,7 @@ using FifthHomework;
 using SixHomework;
 using Logger;
 using System.Threading;
-using ProductionSecondTraining;
+using ProductionSecondTrainin;
 
 namespace epamTrainingSecond
 {
@@ -21,7 +21,7 @@ namespace epamTrainingSecond
                 Runner runner = new Runner();
                 runner.Run();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
                 logger.writeMessageLog(e);

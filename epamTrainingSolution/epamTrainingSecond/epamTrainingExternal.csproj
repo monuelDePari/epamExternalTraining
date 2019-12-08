@@ -98,9 +98,9 @@
       <Project>{39465e49-c770-4bc9-8682-f093851efbb8}</Project>
       <Name>Printer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ProductionSecondTraining\ProductionSecondTraining.csproj">
-      <Project>{e78ddf08-5287-4b62-a1db-1c95f9bd7f34}</Project>
-      <Name>ProductionSecondTraining</Name>
+    <ProjectReference Include="..\ProductionSecondTrainin\ProductionSecondTrainin.csproj">
+      <Project>{ed13e3d2-efe1-440d-8f7e-2d4191f9479a}</Project>
+      <Name>ProductionSecondTrainin</Name>
     </ProjectReference>
     <ProjectReference Include="..\SecondHomework\SecondHomework.csproj">
       <Project>{e5bbbe2d-9a5c-4959-83b0-7d1f25d9ebb5}</Project>
