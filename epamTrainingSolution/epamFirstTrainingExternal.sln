@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2026
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "epamTrainingExternal", "epamTrainingSecond\epamTrainingExternal.csproj", "{5402B00D-C5B3-4017-B506-058C7688EA3A}"
 EndProject
@@ -26,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinthHomework", "NinthHomework\NinthHomework.csproj", "{957A9D2C-536E-4A6D-951D-79E41CFD0269}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IocContainerAndRefactoringHomework", "IocContainerAndRefactoringHomework\IocContainerAndRefactoringHomework.csproj", "{E9A64542-62C6-4DC4-A662-03F7EC01044B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductionTrainingSecond", "ProductionTrainingSecond\ProductionTrainingSecond.csproj", "{4B96144E-7D5D-4FB7-9747-77F3C45CF64C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{E9A64542-62C6-4DC4-A662-03F7EC01044B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9A64542-62C6-4DC4-A662-03F7EC01044B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9A64542-62C6-4DC4-A662-03F7EC01044B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B96144E-7D5D-4FB7-9747-77F3C45CF64C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B96144E-7D5D-4FB7-9747-77F3C45CF64C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B96144E-7D5D-4FB7-9747-77F3C45CF64C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B96144E-7D5D-4FB7-9747-77F3C45CF64C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
