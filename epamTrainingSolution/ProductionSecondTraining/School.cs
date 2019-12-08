@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace ProductionTrainingSecond
+namespace ProductionSecondTraining
 {
-    class School : IStudentObservable
+    class School : ICourseObservable
     {
         List<Course> coursesList;
         List<IStudentObserver> studentList;
@@ -13,7 +15,14 @@ namespace ProductionTrainingSecond
             coursesList = new List<Course>();
             studentList = new List<IStudentObserver>();
         }
-        public void AddObserver(IStudentObserver student)
+        public void GetListOfStudents()
+        {
+            foreach (var student in studentList)
+            {
+                Console.WriteLine($"Name: {student.NameOfStudent} Age: {student.Age} Number: {student.NumberOfStudent}");
+            }
+        }
+        public void AddObserver(IStudentObserver student, Course course)
         {
             for (int i = 0; i < studentList.Count; i++)
             {
@@ -23,7 +32,10 @@ namespace ProductionTrainingSecond
                 }
             }
             if (ValidateStudent(student))
+            {
                 studentList.Add(student);
+                course.AddObserver(student);
+            }
         }
         public void RemoveObserver(IStudentObserver student)
         {

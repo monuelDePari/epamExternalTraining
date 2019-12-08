@@ -94,6 +94,14 @@
       <Project>{957a9d2c-536e-4a6d-951d-79e41cfd0269}</Project>
       <Name>NinthHomework</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Printer\Printer.csproj">
+      <Project>{39465e49-c770-4bc9-8682-f093851efbb8}</Project>
+      <Name>Printer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProductionSecondTraining\ProductionSecondTraining.csproj">
+      <Project>{e78ddf08-5287-4b62-a1db-1c95f9bd7f34}</Project>
+      <Name>ProductionSecondTraining</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SecondHomework\SecondHomework.csproj">
       <Project>{e5bbbe2d-9a5c-4959-83b0-7d1f25d9ebb5}</Project>
       <Name>SecondHomework</Name>
@@ -110,6 +118,9 @@
       <Project>{b0906eee-2be2-442f-946a-5dc76d95f401}</Project>
       <Name>ThirdHomework</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

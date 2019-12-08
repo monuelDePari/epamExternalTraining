@@ -7,7 +7,7 @@ using FifthHomework;
 using SixHomework;
 using Logger;
 using System.Threading;
-using IocContainerAndRefactoringHomework;
+using ProductionSecondTraining;
 
 namespace epamTrainingSecond
 {
@@ -19,8 +19,9 @@ namespace epamTrainingSecond
             try
             {
                 Runner runner = new Runner();
-                runner.RunTask();
-            }catch(Exception e)
+                runner.Run();
+            }
+            catch(Exception e)
             {
                 Console.WriteLine(e.Message);
                 logger.writeMessageLog(e);

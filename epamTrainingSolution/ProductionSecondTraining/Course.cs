@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace ProductionTrainingSecond
+namespace ProductionSecondTraining
 {
     class Course : IStudentObservable
     {
@@ -10,6 +12,13 @@ namespace ProductionTrainingSecond
         public Course()
         {
             studentObservers = new List<IStudentObserver>();
+        }
+        public void GetListOfStudents()
+        {
+            foreach (var student in studentObservers)
+            {
+                Console.WriteLine($"Name: {student.NameOfStudent} Age: {student.Age} Number: {student.NumberOfStudent}");
+            }
         }
         public void AddObserver(IStudentObserver o)
         {
@@ -20,7 +29,7 @@ namespace ProductionTrainingSecond
                     return;
                 }
             }
-            if(ValidateStudent(o))
+            if (ValidateStudent(o))
                 studentObservers.Add(o);
         }
 
